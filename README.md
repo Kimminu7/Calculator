@@ -1,61 +1,14 @@
-# 계산기 과제
+# 계산기 과제 ( Sparta6기 )
 
-```Java
-package com.example.calculator;
+## 필수
 
-import java.util.Scanner;
+Lv 1. 클래스 없이 기본적인 연산을 수행할 수 있는 계산기 만들기
 
-public class Calculator {
-    public static void main(String[] args) {
-        // 1단계 클래스 없이 기본적인 연산을 수행할 수 있는 계산기 만들기
-        Scanner sc = new Scanner(System.in);
-        while (true){
-            System.out.print("첫번째 정수를 입력하세요: ");
-            int num1 = sc.nextInt();
-            System.out.print("두번째 정수를 입력하세요: ");
-            int num2 = sc.nextInt();
-
-            System.out.print("사칙연산(+, -, x, /) 기호를 입력하세요: ");
-            char operator = sc.next().charAt(0); // 문자열에서 첫 번째 문자만 추출
-
-            int result = 0;
-
-            switch (operator) {
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    if (num2 == 0) {
-                        System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
-                        break;
-                    } else {
-                        result = num1 / num2;
-                        break;
-                    }
-                default:
-                    System.out.println("부호를 잘못 입력하였습니다.");
-            }
-            System.out.println("결과 = " + result);
-
-            sc.nextLine(); // 버퍼 비우기 (중요) 엔터값이 남아있어서 초기화 필요함!!
-
-            System.out.print("더 계산하시겠습니까? (exit 입력 시 종료): ");
-            String answer = sc.nextLine();
-
-            if (answer.equals("exit")) {
-                System.out.println("계산기 시스템을 종료합니다.");
-                break;
-            }
-        }
-
-    }
-}
-
-```
 <hr>
+
+Lv 2. 클래스를 적용해 기본적인 연산을 수행할 수 있는 계산기 만들기
+
+
+<hr>
+## 도전
+3. Enum, 제네릭, 람다 & 스트림을 이해한 계산기 만들기
